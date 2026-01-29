@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-loadbalancer-svc
+  namespace: 3tier
+  labels:
+    app: 3tier
+spec:
+  type: LoadBalancer
+  selector:
+    app: mysql
+  ports:
+    - port: 3309
+      targetPort: 3306
