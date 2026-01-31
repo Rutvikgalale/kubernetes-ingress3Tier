@@ -44,14 +44,9 @@ Copy code
 kubectl apply -f namespace.yaml
 kubectl apply -f .
 Enable ingress:
-
-bash
-Copy code
 minikube addons enable ingress
 🌍 Access Methods
 ClusterIP (Internal)
-bash
-Copy code
 minikube ssh
 curl http://<pod-ip>
 NodePort
@@ -67,13 +62,9 @@ curl http://<external-ip>
 Ingress
 Host-based
 
-bash
-Copy code
 http://nginx.local
 http://python.local
 Path-based
 
-bash
-Copy code
 http://<minikube-ip>/nginx
 http://<minikube-ip>/python
